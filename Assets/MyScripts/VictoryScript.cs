@@ -16,7 +16,7 @@ public class VictoryScript : MonoBehaviour {
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Throwable")/* && dsg.getCollectedStarts() == dsg.getNbStarsInGame()*/)
+        if (collision.gameObject.CompareTag("Throwable") && dsg.getCollectedStarts() == dsg.getNbStarsInGame())
         {
             collision.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             canvas.transform.GetChild(0).GetComponent<Image>().sprite = victorySprite;
